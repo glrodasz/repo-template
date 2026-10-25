@@ -1,0 +1,25 @@
+# Dependabot version updates.
+# Security updates are enabled separately (account settings / harden-repos.sh).
+version: 2
+updates:
+  # GitHub Actions used in .github/workflows/
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    cooldown:
+      default-days: 7 # skip versions published less than a week ago
+    groups:
+      actions:
+        patterns: ["*"]
+
+  # Uncomment for JavaScript/TypeScript projects (works for npm, pnpm and yarn)
+  # - package-ecosystem: "npm"
+  #   directory: "/"
+  #   schedule:
+  #     interval: "weekly"
+  #   cooldown:
+  #     default-days: 7
+  #   groups:
+  #     minor-and-patch:
+  #       update-types: ["minor", "patch"]

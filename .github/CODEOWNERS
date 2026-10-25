@@ -1,0 +1,6 @@
+# Every change needs review from the owner.
+*            @glrodasz
+
+# Explicit rule so workflow and config changes never go unreviewed,
+# even if more specific rules are added above later.
+/.github/    @glrodasz
